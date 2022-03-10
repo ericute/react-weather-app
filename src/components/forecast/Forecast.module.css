@@ -1,0 +1,24 @@
+.forecast {
+  flex-basis: 100%;
+}
+
+.city {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.temp {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.sun {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}

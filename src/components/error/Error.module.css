@@ -1,0 +1,14 @@
+.break {
+  /*position: absolute;
+  top: 175px;
+  flex-basis: 100%;*/
+  color: red;
+  font-weight: bold;
+}
+
+/* .break {
+  flex-basis: 100%;
+  margin: auto;
+  color: red;
+  font-weight: bold;
+} */
