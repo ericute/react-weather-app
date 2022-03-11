@@ -45,7 +45,6 @@ function Search({ submitSearch }) {
 
   return (
     <>
-      <Error message={errorMessage} />
       <div className={searchStyle.search}>
         <input
           type="text"
@@ -76,6 +75,7 @@ function Search({ submitSearch }) {
           </ul>
         )}
       </div>
+      <Error message={errorMessage} />
     </>
   );
 }

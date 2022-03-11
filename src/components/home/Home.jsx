@@ -25,7 +25,7 @@ function Home() {
     if (data) {
       // console.log(data);
       const updatedData = { ...data, cityName };
-      console.log("updatedData", updatedData);
+      // console.log("updatedData", updatedData);
       setForecast(updatedData);
     }
   };

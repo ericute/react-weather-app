@@ -1,14 +1,7 @@
 .break {
-  /*position: absolute;
-  top: 175px;
-  flex-basis: 100%;*/
+  display: block;
+  text-align: center;
+  padding-top: 30px;
   color: red;
   font-weight: bold;
 }
-
-/* .break {
-  flex-basis: 100%;
-  margin: auto;
-  color: red;
-  font-weight: bold;
-} */
