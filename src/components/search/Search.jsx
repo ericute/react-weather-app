@@ -53,7 +53,7 @@ function Search({ submitSearch }) {
           onChange={onChangeQuery}
         ></input>
         {query.length > 3 && results.length > 0 && (
-          <ul>
+          <ul data-testid="intellisense-result">
             {results.map((city) => {
               return (
                 <li key={city.slug}>

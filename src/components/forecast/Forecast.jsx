@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import forecastStyle from "./Forecast.module.css";
 import moment from "moment-timezone";
 
@@ -8,7 +8,7 @@ function Forecast({ forecast }) {
 
   const { cityName, current, timezone, daily } = forecast;
 
-  console.log(daily[0]);
+  // console.log(daily[0]);
 
   return (
     <>
@@ -46,6 +46,7 @@ function Forecast({ forecast }) {
               <div className="row">
                 <div>
                   <img
+                    alt="Current weather icon"
                     src={`https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`}
                   />
                 </div>
@@ -65,6 +66,7 @@ function Forecast({ forecast }) {
                   <div className="col-4" style={{ textAlign: "right" }}>
                     {curDay.weather[0].description}
                     <img
+                      alt="Forecast weather icon"
                       src={`https://openweathermap.org/img/wn/${curDay.weather[0].icon}@2x.png`}
                       width="40px"
                       height="40px"
