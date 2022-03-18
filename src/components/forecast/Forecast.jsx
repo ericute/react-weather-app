@@ -53,15 +53,15 @@ function Forecast({ forecast }) {
               </div>
             </div>
           </div>
-          <div className={`row ${forecastStyle.weekly}`}>
+          <div className={forecastStyle.weekly}>
             {daily.map((curDay) => {
               return (
-                <Fragment key={curDay.dt}>
+                <div className={`row `} key={curDay.dt}>
                   <div className="col-4">
-                    {moment.unix(curDay.dt).tz(timezone).format("dddd, MMM Do")}
+                    {moment.unix(curDay.dt).tz(timezone).format("ddd, MMM Do")}
                   </div>
                   <div className="col-4">
-                    From {curDay.temp.min}°C to {curDay.temp.max}°C
+                    {curDay.temp.min}°C to {curDay.temp.max}°C
                   </div>
                   <div className="col-4" style={{ textAlign: "right" }}>
                     {curDay.weather[0].description}
@@ -72,7 +72,7 @@ function Forecast({ forecast }) {
                       height="40px"
                     />
                   </div>
-                </Fragment>
+                </div>
               );
             })}
           </div>

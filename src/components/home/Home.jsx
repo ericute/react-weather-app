@@ -7,6 +7,8 @@ import homeStyle from "./Home.module.css";
 
 import axios from "axios";
 
+import { getFullData } from "../../api/weatherData";
+
 function Home() {
   const [forecast, setForecast] = useState(null);
 
@@ -18,14 +20,13 @@ function Home() {
 
     e.preventDefault();
 
-    const { data } = await axios.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${city.coord.lat}&lon=${city.coord.lon}&appid=${process.env.REACT_APP_OWM_APIKEY}&units=metric&exclude=minutely`
-    );
+    // console.log(city.coord);
+
+    const { data } = await getFullData(city.coord.lat, city.coord.lon);
 
     if (data) {
-      // console.log(data);
+      console.log(data);
       const updatedData = { ...data, cityName };
-      // console.log("updatedData", updatedData);
       setForecast(updatedData);
     }
   };

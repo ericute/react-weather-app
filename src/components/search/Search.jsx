@@ -24,7 +24,7 @@ function Search({ submitSearch }) {
 
     if (value.length > 3) {
       for (let city of cities) {
-        if (matchingCities.length >= 5) {
+        if (matchingCities.length > 10) {
           break;
         }
         const match = city.name.toLowerCase().startsWith(value.toLowerCase());
@@ -36,9 +36,12 @@ function Search({ submitSearch }) {
           matchingCities.push(cityData);
         }
       }
-      if (matchingCities.length === 0) setErrorMessage("City not found.");
+      if (matchingCities.length === 0) {
+        setErrorMessage("City not found.");
+        setResults([]);
+      }
       setResults(matchingCities);
-      // console.log(results);
+      console.log(matchingCities);
       return results;
     }
   };

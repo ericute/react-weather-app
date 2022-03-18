@@ -6,6 +6,7 @@
   margin: 10px 20px !important;
   padding: 15px;
   text-align: center;
+  font-size: 12px;
 }
 
 .weekly {
@@ -16,6 +17,7 @@
   margin: 20px !important;
   padding: 15px;
   align-items: center;
+  font-size: 12px;
 }
 
 .city {
@@ -37,7 +39,7 @@
 */
 
 .day {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .sun {
