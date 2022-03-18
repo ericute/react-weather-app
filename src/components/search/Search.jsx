@@ -41,7 +41,6 @@ function Search({ submitSearch }) {
         setResults([]);
       }
       setResults(matchingCities);
-      console.log(matchingCities);
       return results;
     }
   };

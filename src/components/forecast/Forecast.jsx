@@ -3,12 +3,9 @@ import forecastStyle from "./Forecast.module.css";
 import moment from "moment-timezone";
 
 function Forecast({ forecast }) {
-  // console.log(forecast);
   if (!forecast) return <></>;
 
   const { cityName, current, timezone, daily } = forecast;
-
-  // console.log(daily[0]);
 
   return (
     <>

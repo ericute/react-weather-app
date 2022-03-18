@@ -7,7 +7,7 @@ describe("Search box rendering", () => {
     render(
       <Search
         submitSearch={() => {
-          console.log("xxx");
+          // console.log("Mock run");
         }}
       />
     );
@@ -27,8 +27,7 @@ describe("Search box rendering", () => {
     fireEvent.change(cityInput, { target: { value: "Manila" } });
 
     const results = screen.getByTestId("intellisense-result");
-    console.log("> 3 chars");
-    console.log(results.innerHTML);
+    // console.log(results.innerHTML);
     expect(results.innerHTML.split("href").length - 1).toBe(3);
   });
 });

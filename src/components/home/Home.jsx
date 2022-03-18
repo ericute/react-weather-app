@@ -5,8 +5,6 @@ import Forecast from "../forecast/Forecast";
 
 import homeStyle from "./Home.module.css";
 
-import axios from "axios";
-
 import { getFullData } from "../../api/weatherData";
 
 function Home() {
@@ -14,19 +12,15 @@ function Home() {
   const [forecast, setForecast] = useState(null);
 
   const submitSearch = async (e, city) => {
-    // console.log(city);
     const cityName = `${city.name} ${
       city.state ? `, ${city.state} (${city.country})` : `(${city.country})`
     }`;
 
     e.preventDefault();
 
-    // console.log(city.coord);
-
     const { data } = await getFullData(city.coord.lat, city.coord.lon, API_KEY);
 
     if (data) {
-      console.log(data);
       const updatedData = { ...data, cityName };
       setForecast(updatedData);
     }
