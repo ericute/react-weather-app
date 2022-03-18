@@ -47,15 +47,9 @@
     "@babel/core": "^7.17.7",
     "@babel/preset-react": "^7.16.7",
     "babel-jest": "^27.5.1",
+    "dotenv": "^16.0.0",
     "gh-pages": "^3.2.3",
     "regenerator-runtime": "^0.13.9"
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "moduleNameMapper": {
-      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
-      "\\.(gif|ttf|eot|svg|jpeg)$": "<rootDir>/__mocks__/fileMock.js"
-    },
-    "setupFilesAfterEnv": ["<rootDir>/setupTests.js"]
   }
+
 }

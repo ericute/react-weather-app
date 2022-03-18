@@ -10,6 +10,7 @@ import axios from "axios";
 import { getFullData } from "../../api/weatherData";
 
 function Home() {
+  const API_KEY = process.env.REACT_APP_OWM_APIKEY;
   const [forecast, setForecast] = useState(null);
 
   const submitSearch = async (e, city) => {
@@ -22,7 +23,7 @@ function Home() {
 
     // console.log(city.coord);
 
-    const { data } = await getFullData(city.coord.lat, city.coord.lon);
+    const { data } = await getFullData(city.coord.lat, city.coord.lon, API_KEY);
 
     if (data) {
       console.log(data);
